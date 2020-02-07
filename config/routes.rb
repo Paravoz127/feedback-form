@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:index, :new, :create] do
     collection do
-      get 'search/:text', action: :search
+      get 'search', action: :search, as: :search
     end
   end
 

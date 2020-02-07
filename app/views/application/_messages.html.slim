@@ -3,3 +3,11 @@
     = content
     button.close-button(tabindex="0" aria-label="Dismiss alert" type="button" data-close)
       span aria-hidden="true" &times;
+
+- if @message && @message.errors.any?
+  div class="error_explanation"
+      - @message.errors.full_messages.each do |message|
+        div(class="callout #{message}" data-closable)
+          = message
+          button.close-button(tabindex="0" aria-label="Dismiss alert" type="button" data-close)
+            span aria-hidden="true" &times;
