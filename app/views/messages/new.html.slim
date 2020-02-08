@@ -1,18 +1,20 @@
 - content_for :home_page do
   = "active"
+.header
+  h2 Feedback form
+.body-of-content
+  = form_with(model: @message, local: true) do |form|
+    .form-group
+      = form.label :name
+      = form.text_field :name, class: "form-control"
 
-= form_with(model: @message, local: true) do |form|
-  .form-group
-    = form.label :name
-    = form.text_field :name, class: "form-control"
+    .form-group
+      = form.label :email
+      = form.text_field :email, class: "form-control"
 
-  .form-group
-    = form.label :email
-    = form.text_field :email, class: "form-control"
+    .form-group
+      = form.label :content
+      = form.text_area :content, class: "form-control"
 
-  .form-group
-    = form.label :content
-    = form.text_area :content, class: "form-control"
-
-  .form-group
-    = form.submit class: "btn btn-primary", id: "Submit"
+    .form-group
+      = form.submit class: "btn btn-primary", id: "Submit"

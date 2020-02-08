@@ -1,6 +1,6 @@
-ul class="nav nav-tabs" id="myTab" role="tablist"
+ul class="nav nav-pills" id="myTab" role="tablist"
   li.nav-item
-    = link_to "Home", root_path, class: "nav-link #{ yield :home_page }"
+    = link_to "Home", root_path, class: "nav-link top-line-button #{ yield :home_page }"
   - if user_signed_in? && current_user.user.admin
     li.nav-item
-    = link_to "Messages", messages_path, class: "nav-link #{ yield :messages_page }"
+    = link_to "Messages", messages_path, class: "nav-link top-line-button #{ yield :messages_page }"

@@ -15,13 +15,11 @@ html
   body
 
     .container
-
-      = render 'navbar'
+      .nav-bar
+        = render 'navbar'
       = render 'flash'
 
       br
-
       .row
-        .col-md-6.offset-md-3
+        .col-md-6.offset-md-3.content
           = yield
-      = render "footer"

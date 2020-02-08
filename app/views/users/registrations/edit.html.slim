@@ -1,8 +1,8 @@
-.row
+.header
   .columns
     h2 = title("Edit #{current_user.full_name}")
 
-.row
+.body-of-content
   .medium-5.columns
     = simple_form_for resource,
         as: resource_name,
@@ -34,4 +34,5 @@
       = link_to "Cancel my account.",
           registration_path(resource_name),
           data: { confirm: "Are you sure?" },
-          method: :delete
+          method: :delete,
+          class: "btn btn-primary"
