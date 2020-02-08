@@ -1,7 +1,5 @@
 class MessageMailer < ApplicationMailer
   layout "mailer"
-  
-  default from: 'feedback@form.com'
 
   def send_message
     @name = params[:message].name
