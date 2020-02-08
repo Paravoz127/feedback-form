@@ -10,10 +10,12 @@
         html: { method: :post } do |f|
 
       .form-inputs
-        = f.input :email, required: true
+        .form-group
+          = f.input :email, required: true, input_html: { class: 'form-control' }
 
       .form-actions
-        = f.button :submit, "Resend confirmation instructions"
+        .form-group
+          = f.button :submit, "Resend confirmation instructions", class: "btn btn-primary", id: "Submit"
 
-  .medium-5.medium-offset-1.columns.end
+
     = render "users/shared/links"

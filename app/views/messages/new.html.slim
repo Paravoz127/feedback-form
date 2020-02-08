@@ -1,4 +1,7 @@
- = form_with(model: @message, local: true) do |form|
+- content_for :home_page do
+  = "active"
+
+= form_with(model: @message, local: true) do |form|
   .form-group
     = form.label :name
     = form.text_field :name, class: "form-control"

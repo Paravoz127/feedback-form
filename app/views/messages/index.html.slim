@@ -1,12 +1,17 @@
-= form_with(url: "/messages/search/", method: "get") do 
-  = label_tag(:text, "Search for:")
-  = text_field_tag(:text)
-  = submit_tag("Search")
+- content_for :messages_page do
+  = "active"
 
-- @messages.each do |message|
-  div 
-    = message.name
-  div
-    = message.email
-  div
-    = message.content
+= form_with(url: "/messages/search/", method: "get") do 
+  .row
+    .col-8
+      .form-group
+        = text_field_tag(:text, "", class: "form-control")
+    .col-4
+      .form-group
+        = submit_tag("Search", class: "btn btn-primary")
+
+hr
+
+= render @messages
+
+= will_paginate @messages, renderer: WillPaginate::ActionView::BootstrapLinkRenderer

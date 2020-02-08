@@ -3,14 +3,14 @@ class MessagesController < ApplicationController
     unless current_user && current_user.admin
       redirect_to root_path and return
     end
-    @messages = Message.all
+    @messages = Message.all.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
   end
 
   def search
     unless current_user && current_user.admin
       redirect_to root_path and return
     end
-    @messages = Message.admin_search params[:text]
+    @messages = Message.admin_search(params[:text]).order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
     render :index
   end
 
