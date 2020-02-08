@@ -6,9 +6,10 @@ class MessageMailer < ApplicationMailer
   def send_message
     @name = params[:message].name
     @message = params[:message].content
+    @email = params[:message].email
 
     receiver = User.where("admin = true").first
 
-    mail(from: params[:message].email, to: receiver.email, subject: 'You have a new message')
+    mail(to: receiver.email, subject: 'You have a new message')
   end
 end
