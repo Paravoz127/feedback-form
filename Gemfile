@@ -7,7 +7,6 @@ gem "rails", "5.1.6.2"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 
-
 # assets
 gem "autoprefixer-rails"
 gem "coffee-rails"
