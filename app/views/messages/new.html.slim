@@ -6,15 +6,15 @@
   = form_with(model: @message, local: true) do |form|
     .form-group
       = form.label :name
-      = form.text_field :name, class: "form-control"
+      = form.text_field :name, class: "form-control", id: "name"
 
     .form-group
       = form.label :email
-      = form.text_field :email, class: "form-control"
+      = form.text_field :email, class: "form-control", id: "email"
 
     .form-group
       = form.label :content
-      = form.text_area :content, class: "form-control"
+      = form.text_area :content, class: "form-control", id: "content"
 
     .form-group
-      = form.submit class: "btn btn-primary", id: "Submit"
+      = form.submit "Submit feedback", class: "btn btn-primary", id: "Submit feedback"

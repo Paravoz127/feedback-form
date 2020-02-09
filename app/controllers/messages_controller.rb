@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       if MessageMailer.with(message: @message).send_message.deliver_later
-        redirect_to root_path, notice: 'Message sent successfully'
+        redirect_to root_path, notice: 'Feedback was successfully send!'
       else
         @message.destroy
         redirect_to root_path, notice: 'Can not send message'
