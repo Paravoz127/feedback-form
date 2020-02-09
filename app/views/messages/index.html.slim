@@ -14,7 +14,8 @@
   hr
   - if @messages.empty?
     h1
-      = "Messages not found"
+      .center
+        = "Messages not found"
   - else
     = render @messages
     = will_paginate @messages, renderer: WillPaginate::ActionView::BootstrapLinkRenderer

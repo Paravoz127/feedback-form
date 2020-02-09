@@ -111,3 +111,7 @@ body {
 {
     box-shadow:none;
 }
+
+.center {
+    text-align: center;
+}
