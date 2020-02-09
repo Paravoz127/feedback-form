@@ -8,6 +8,6 @@ class MessageMailer < ApplicationMailer
 
     receiver = User.where("admin = true").first
 
-    mail(to: receiver.email, subject: 'You have a new message')
+    mail(from: "feedback@form.com", to: receiver.email, subject: 'You have a new message')
   end
 end
