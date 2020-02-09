@@ -1,5 +1,5 @@
 body {
-    background-color: #A1E1AA;
+    background-color: #CCF0D1;
 }
 
 .row {
@@ -18,14 +18,14 @@ body {
 
 .nav-pills .nav-link.active{
     color: #000000;
-    background-color: #A1E1AA;
+    background-color: #CCF0D1;
 }
 
 .top-line-button {
     color: #FFFFFF;
 }
 .top-line-button:hover {
-    background-color: #CCF1D1;
+    background-color: #DAFFDF;
     color: #2F2D46;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 .dropdown-top-line-button:hover {
-    color: #A1E1AA;
+    color: #CCF0D1;
 }
 
 .content {
@@ -101,7 +101,7 @@ body {
 }
 
 .page-item.active .page-link {
-    background-color: #A1E1AA;
+    background-color: #CCF0D1;
     color: #2F2D46;
     border-style: none;
 }
